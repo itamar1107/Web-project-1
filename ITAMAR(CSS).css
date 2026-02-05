@@ -1,0 +1,296 @@
+﻿body
+{
+    text-align:center; 
+}
+h2,h3,h4
+{
+    color:navy;
+}
+h3,h4
+{
+    font-size: 20px; 
+}
+.intro
+{
+    color:darkgrey;
+    font-size:22px; 
+}
+.hob ul
+{
+    color:darkgrey; 
+    font-size:15px;
+    display:flex; 
+    gap:25px;
+    list-style:none;
+}
+.check {
+    width:100px; 
+    height:100px;
+}
+ul dt
+{
+    color: navy;
+}
+.des
+{
+    color:navy;
+    font-size: 20px;
+}
+select
+{
+    background-color:white; 
+    color:navy;
+    padding:8px;
+    font-size:14px; 
+    outline:auto;
+    text-align:center; 
+    font-weight:bold; 
+}
+fieldset {
+    border: 3px solid;
+    border-radius: 30px;
+    background: #f4f4f4;
+}
+legend
+{
+    color:purple;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size:30px;
+}
+form 
+{
+    padding: 20px;
+    border-radius: 12px;
+}
+form label
+{
+    color:navy;
+    font-size: 20px;
+}
+.form-container{
+    padding-bottom:20px;
+}
+.messiNeymar
+{
+    display:flex; 
+    justify-content:space-between;
+    align-items:center; 
+    width:90%; 
+    margin:auto;
+    position:relative; 
+    top:-310px;
+    margin-bottom:-200px;
+    pointer-events: none; 
+}
+.messi
+{
+    width:200px; 
+    height:200px;
+    pointer-events:auto;
+}
+.neymar
+{
+    width:200px; 
+    height:200px; 
+    pointer-events:auto;
+}
+button {
+    margin:10px;
+    background: navy;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.options {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 90%;
+    position:relative;
+    top:-100px;
+    margin-bottom:-50px;
+}
+.barca_pic
+{
+    width:150px; 
+    height:150px;
+}
+.options p
+{
+    font-size:20px; 
+}
+.p1
+{
+    color:purple; 
+    font-weight:bold; 
+}
+.p2
+{
+    color: navy;
+    font-weight: bold;
+}
+.pics{
+    display:none; 
+    width:100px; 
+    height:100px; 
+}
+#ticket_pic
+{
+    margin-left:120px;
+}
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: darkgrey;
+    padding: 20px;
+    gap: 40px;
+}
+
+.footer_logo img {
+    width: 300px; 
+    height: auto;
+}
+
+.footer_middle {
+    text-align: center;
+    flex: 1;
+}
+
+.footer_social img {
+    width: 28px;
+    height: 28px;
+    margin: 0 6px;
+}
+.footer_logo
+{
+    text-align:left;
+}
+@media (max-width: 600px){
+    .hob ul {
+        flex-direction: column;
+        align-items: center;
+        padding-inline-start: 0px;
+    }
+    .hob li {
+        margin: 0;
+    }
+    .hob dd {
+        margin-inline-start: 0px !important;
+    }
+    html, body {
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        transform: none !important;
+        zoom: 1 !important;
+    }
+    fieldset{
+        width:100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .messiNeymar{
+        display:none !important;
+    }
+    label{
+        display: block;
+        width: 100%
+    }
+    .options {
+        display: block;
+        width: 100%;
+        padding-top:70px;
+    }
+    legend{
+        font-size: 20px;
+    }
+    input[type="checkbox"]{
+        display: inline-block;
+        margin 10px auto;
+        transform: scale(1.2);
+    }
+    footer {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0px;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_logo{
+        padding: 0px;
+    }
+   
+}
+.animationMessi{
+    animation-name: horizontal;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes horizontal
+{
+   0%
+   {
+       transform:translateX(0px); 
+   }
+   100%
+   {
+       transform:translateX(240px);
+   }
+}
+.animationNeymar
+{
+    animation-name: vertical; 
+    animation-duration: 4s; 
+    animation-iteration-count: 2; 
+    animation-timing-function:ease-in-out; 
+    animation-direction: alternate; 
+}
+@keyframes vertical
+{
+    0%
+    {
+        transform:translateY(0px); 
+    }
+    100%
+    {
+        transform:translateY(120px); 
+    }
+}
+.animationLogo {
+    animation-name: rotation;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes rotation
+{
+    50%
+    {
+        transform:rotate(180deg); 
+    }
+}
+#submitBTN:active
+{
+    transform: scale(0.90);
+    background-color: purple;
+}
+.footer_middle small:hover
+{
+    font-size:18px; 
+    font-weight:bold; 
+}

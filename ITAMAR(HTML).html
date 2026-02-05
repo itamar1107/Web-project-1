@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="ITAMAR(CSS).css" />
+    <script type="text/javascript" src="ITAMAR(JAVASCRIPT).js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Itamar Kahalani</title>
+</head>
+<body>
+    <h1>Itamar Kahalani</h1>
+    <script>
+        $(document).ready(function ()
+        {
+            $("h1").dblclick(function ()
+            {
+                $(this).css("color", "yellow");
+            }
+            );
+        }
+        );
+    </script>
+    <article>
+        <h2>About Myself</h2>
+        <p class="intro">
+            My name is <em>Itamar</em>, I am 26 years old from <em>Israel</em> and a second year computer science student at <em>EUC</em>.
+        </p>
+        <script>
+            $(document).ready(function ()
+            {
+                $(".intro").mouseenter(function ()
+                {
+                    $(this).css("background-color", "navy"); 
+                }
+                );
+                $(".intro").mouseleave(function ()
+                {
+                    $(this).css("background-color", "white");
+                }
+                );
+            });
+        </script>
+    </article>
+    <h3>Hobbies</h3>
+    <section class="hob">
+        <ul id="hobList">
+            <li>
+                <dl>
+                    <dt>
+                        Football:
+                    </dt>
+                    <dd>
+                        I love to play with my friends and family,I am also a supporter of FC Barcelona.
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        Skiing:
+                    </dt>
+                    <dd>
+                        I am skiing since I was 8 years old with my family, most of the times in Switzerland.
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        Working out:
+                    </dt>
+                    <dd>
+                        I am going to the gym 3 times a week for the last two years.
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        Traveling:
+                    </dt>
+                    <dd>
+                        I travel at least once a year and love to explore new cultures.
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </section>
+    <button id="show">hide/show list</button>
+    <script>
+        $(document).ready(function ()
+        {
+            $("#show").click(function ()
+            {
+                if ($("#hobList").is(":visible")) {
+                    $("#hobList").slideUp(500);
+                }
+                else {
+                    $("#hobList").slideDown(500); 
+                }
+            }
+            );
+        }
+        );
+    </script>
+    <h4>Out of the 4, choose your favorites</h4>
+    <label>
+        <input type="checkbox" name="hobbie" value="1" />  <img src="football.png" alt="footbal" class="check" />
+    </label>
+    <label>
+        <input type="checkbox" name="hobbie" value="2" />  <img src="ski.png" alt="ski" class="check" />
+    </label>
+    <label>
+        <input type="checkbox" name="hobbie" value="3" />  <img src="gym.png" alt="gym" class="check" />
+    </label>
+    <label>
+        <input type="checkbox" name="hobbie" value="4" />  <img src="travel.png" alt="travel" class="check" />
+    </label>
+    <script>
+        $(document).ready(function ()
+        {
+            $(".check").hover(function ()
+            {
+                $(this).stop().fadeOut(800);
+            }, 
+                function ()
+                {
+                    $(this).stop().fadeIn(800);
+                }
+            );
+        }
+        );
+    </script>
+    <br />
+    <p class="des"> <strong>Help me choose my next destination</strong></p>
+    <select name="Destinations">
+        <optgroup label="Asia">
+            <option value="1">Japan</option>
+            <option value="2">South Korea</option>
+        </optgroup>
+        <optgroup label="Africa">
+            <option value="1">South Africa</option>
+            <option value="2">Senegal</option>
+        </optgroup>
+        <optgroup label="Europe">
+            <option value="1">Germany</option>
+            <option value="2">France</option>
+        </optgroup>
+    </select>
+    <script>
+        $(document).ready(function ()
+        {
+            $("select").change(function ()
+            {
+                $(this).animate({ width: "300px" }, 300).animate({ width: "150px" }, 300);
+
+            }
+            );
+        }
+        );
+    </script>
+    <div class="form-container">
+        <form method="get" action="support.aspx">
+            <fieldset>
+                <legend>Create a fan card for FC Barcelona</legend>
+                <label><strong>*Name:</strong></label>
+                <br />
+                <input type="text" name="name" autofocus required placeholder="full name" />
+                <br />
+                <label><strong>*Phone number:</strong></label>
+                <br />
+                <input type="tel" name="phone" pattern="[0-9]{8}" required placeholder="8 digits"/>
+                <br />
+                <label><strong>Address:</strong></label>
+                <br />
+                <input type="text" name="address" />
+                <br />
+                <label><strong>*Age:</strong></label>
+                <br />
+                <input type="number" name="age" min="18" max="120" required placeholder="18+"/>
+                <br />
+                <label><strong>*Email:</strong></label>
+                <br />
+                <input type="email" name="email" required placeholder="example@mail.com"/>
+                <br />
+                <label><strong>*Create a password</strong></label>
+                <br />
+                <input type="password" name="password" minlength="8" maxlength="10" required />
+                <br />
+                <label><strong>*Choose your sit type</strong></label>
+                <br />
+                <input type="radio" name="sit" value="1" required/> <span>regular</span>
+                <input type="radio" name="sit" value="2" required/> <span>vip</span> 
+                <input type="radio" name="sit" value="3" required/> <span>box</span>
+                <br />
+                <label><strong>Tell me if you need any special assistance (up to 100 characters)</strong></label>
+                <br />
+                <textarea name="message" placeholder="write the message here" maxlength="100"></textarea>
+                <br />
+                <label><strong>*Am I the number one fan of Barcelona?</strong></label>
+                <br />
+                <input type="radio" name="fan" value="1" required /> yes
+                <input type="radio" name="fan" value="2" disabled required /> no
+                <br />
+                <script>
+                    $(document).ready(function ()
+                    {
+                        $("input[name='name']").keydown(function () {
+                            $(this).css("background-color", "lightyellow");
+                        })
+                            .keyup(function ()
+                            {
+                                $(this).css("background-color", "initial"); 
+                            });
+
+                        $("input[name='phone']").keydown(function () {
+                            $(this).css("background-color", "lightyellow");
+                        })
+                            .keyup(function () {
+                                $(this).css("background-color", "initial");
+                            });
+
+                        $("input[name='address']").keydown(function () {
+                            $(this).css("background-color", "lightyellow");
+                        })
+                            .keyup(function () {
+                                $(this).css("background-color", "initial");
+                            });
+
+                        $("input[name='age']").keydown(function () {
+                            $(this).css("background-color", "lightyellow");
+                        })
+                            .keyup(function () {
+                                $(this).css("background-color", "initial");
+                            });
+
+                        $("input[name='email']").keydown(function () {
+                            $(this).css("background-color", "lightyellow");
+                        })
+                            .keyup(function () {
+                                $(this).css("background-color", "initial");
+                            });
+
+                        $("input[name='password']").keydown(function () {
+                            $(this).css("background-color", "lightyellow");
+                        })
+                            .keyup(function () {
+                                $(this).css("background-color", "initial");
+                            });
+
+                        $("textarea[name='message']").keydown(function () {
+                            $(this).css("background-color", "lightyellow");
+                        })
+                            .keyup(function () {
+                                $(this).css("background-color", "initial");
+                            });
+                    });
+                </script>
+                <div class="messiNeymar">
+                    <img src="messi.jpg" alt="messi" class="messi" id="messi" onclick="moveMessi()" />
+                    <img src="neymar.jpg" alt="neymar" class="neymar" id="neymar" onclick="moveNeymar()" />
+                </div>
+            </fieldset>
+            <button id="submitBTN">Submit</button>
+        </form>
+        <script>
+            $(document).ready(function ()
+            {
+                $("input[name='sit']").change(function ()
+                {
+                    let text = $(this).next().text();
+                    alert("The sit type you choose is: " + text);
+                }
+                );
+            }
+            );
+        </script>
+        <script>
+            $(document).ready(function ()
+            {
+                $("#submitBTN").mousedown(function ()
+                {
+                    $(this).css("transform", "scale(0.90)");
+                }
+                );
+                $("#submitBTN").mouseup(function ()
+                {
+                    $(this).css("transform", "scale(1)");
+                }
+                );
+            }
+            );
+        </script>
+        <fieldset>
+            <legend> for more info about FC Barcelona, visit the official website(click the picture)</legend>
+            <nav>
+                <a href="https://www.fcbarcelona.com/en/" target="_blank"><img src="FC BARCELONA.webp" alt="FCB symnol" class="barca_pic" /></a>
+            </nav>
+            <div class="options">
+                <p class="p1" id="store">Official store</p>
+                <img src="store.png" alt="store picture" class="pics" id="store_pic"/>
+                <p class="p2" id="match">Match days</p>
+                <img src="matchday.png" alt=" matchday picture" class="pics" id="match_pic" />
+                <p class="p1" id="tickets">Tickets</p>
+                <img src="ticket.png" alt="ticket picture" class="pics" id="ticket_pic" />
+                <p class="p2" id="standnigs">Standings</p>
+                <img src="table.png" alt="football table picture" class="pics" id="standings_pic" />
+            </div>
+            <script>
+                $(document).ready(function ()
+                {
+                    $("#store").click(function ()
+                    {
+                        $("#store").hide(); 
+                        $("#store_pic").show(); 
+                    });
+
+                    $("#match").click(function () {
+                        $("#match").hide();
+                        $("#match_pic").show();
+                    });
+
+                    $("#tickets").click(function () {
+                        $("#tickets").hide();
+                        $("#ticket_pic").show();
+                    });
+
+                    $("#standnigs").click(function () {
+                        $("#standnigs").hide();
+                        $("#standings_pic").show();
+                    });
+                });
+            </script>
+        </fieldset>   
+    </div>
+    <footer>
+            <div class="footer_logo">
+                <img src="logo.png" alt="logo" id="logo" onmouseover="moveLogo()" />
+            </div>
+            <div class="footer_middle">
+                <p>Contact Details</p>
+                <p>Phone number: <small>+357 97456365</small> </p>
+                <p>Email adress: <small>kahalaniitamar@gmail.com</small></p>
+
+                <nav class="footer_social">
+                    <a href="https://www.linkedin.com/in/itamar-kahalani/" target="_blank"><img src="linkedin.jpg" alt="linkedIn profile" id="linkedin" /></a>
+                    <a href="https://www.instagram.com/itamarkahalani11/" target="_blank"><img src="instagarm.jpg" alt="Instagram profile" id="instagram" /></a>
+                    <a href="https://www.facebook.com/itamar.kahalani.77" target="_blank"><img src="facebook.jpg" alt="Facebook profile" id="facebook" /></a>
+                </nav>
+                <script>
+                    $(document).ready(function ()
+                    {
+                        $("#linkedin").click(function ()
+                        {
+                            $(this).replaceWith('<img id="linkedin" src="linkedin1.png" class="social"/>');
+                        });
+                        $("#facebook").click(function () {
+                            $(this).replaceWith('<img id="facebook" src="facebook1.png" class="social"/>');
+                        });
+                        $("#instagram").click(function () {
+                            $(this).replaceWith('<img id="instagram" src="instagram1.png" class="social"/>');
+                        });
+                    });
+                </script>
+            </div>
+    </footer>
+</body>
+</html>
